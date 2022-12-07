@@ -13,6 +13,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+conda activate main
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -94,6 +96,9 @@ plugins=(
 	vagrant
 	
 	command-not-found
+
+	pip
+	conda-zsh-completion
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -124,6 +129,9 @@ export EDITOR=vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+autoload -U compinit && compinit
+zstyle ':completion::complete:*' use-cache 1
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[$ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[(i)forward-char]]=()

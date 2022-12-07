@@ -11,10 +11,10 @@
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 function conda_info {
-    [ $CONDA_DEFAULT_ENV ] && echo '('%F{yellow}`basename $CONDA_DEFAULT_ENV`%f') '
+    [ $CONDA_DEFAULT_ENV ] && echo '['%F{yellow}`basename $CONDA_DEFAULT_ENV`%f'] '
 }
 function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo '['%F{blue}`basename $VIRTUAL_ENV`%f'] '
+    [ $VIRTUAL_ENV ] && echo '{'%F{blue}`basename $VIRTUAL_ENV`%f'} '
 }
 PR_GIT_UPDATE=1
 
